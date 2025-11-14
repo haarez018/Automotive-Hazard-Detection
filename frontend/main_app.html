@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Autonomous Hazard Logger</title>
+    <link rel="stylesheet" href="/frontend/assets/main.css">
+</head>
+
+<body>
+
+<!-- PAGE WRAPPER (fixes layout) -->
+<div class="page-wrapper">
+
+    <!-- LEFT PANEL — FIXED -->
+    <div class="left-panel">
+        <h3>Live Camera Feed</h3>
+
+        <img id="video-stream-img" width="640" height="480"
+             style="background:black; border:1px solid #444;" 
+             alt="Live Video Stream">
+
+        <p id="status-message">Status: CONNECTING...</p>
+    </div>
+
+    <!-- RIGHT PANEL — SCROLLABLE -->
+    <div class="right-panel">
+        <h3>Hazard Log (Latest First)</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Severity</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+
+            <tbody id="hazard-table-body"></tbody>
+        </table>
+    </div>
+
+</div> <!-- END PAGE WRAPPER -->
+
+<script src="/frontend/assets/realtime_viz.js"></script>
+
+</body>
+</html>
